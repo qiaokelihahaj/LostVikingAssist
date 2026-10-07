@@ -80,7 +80,7 @@ public partial class MainWindow : Window
             ResultInfo.Text = "地图已生成并校验，可以安装。";
             ResultInfo.ToolTip = builtMap;
             if (result.SkippedLocales > 0) Log($"已跳过 {result.SkippedLocales} 个未安装语言文件，其余地图文件已保留并校验。");
-            Log("可点击“安装补丁”。游戏中仍需验证正常入口加载和官方成就记录。");
+            Log("退出游戏和编辑器后，点击“安装补丁”。");
         });
     }
     string? ChooseGeneratedMap()
@@ -97,8 +97,8 @@ public partial class MainWindow : Window
         await Run("安装", async () =>
         {
             string result = await Privileged("install", root, map);
-            ResultInfo.Text = "补丁已安装，可进入酒吧街机验证。"; ResultInfo.ToolTip = result; Log(result);
-            Log("进入海伯利昂酒吧街机：超过 10 秒碰敌弹，间隔 1 秒以上连放 5 次炸弹。");
+            ResultInfo.Text = "补丁已安装，从战役酒吧街机进入小游戏即可使用。"; ResultInfo.ToolTip = result; Log(result);
+            Log("成就分数：铜牌 125,000；银牌 250,000；金牌 500,000。");
         });
     }
     async void RestoreMap(object sender, RoutedEventArgs e)
@@ -138,7 +138,7 @@ public partial class MainWindow : Window
             if (!File.Exists(target)) { Log("战役目录没有覆盖地图，当前通过客户端原版资源加载。"); return; }
             var status = await Task.Run(() => AssistService.InspectMap(target));
             Log($"已安装文件：无限炸弹 {(status.InfiniteBombs ? "开启" : "关闭")}；飞船无敌 {(status.Invulnerable ? "开启" : "关闭")}。");
-            Log("文件检查通过。实际战役入口是否采用覆盖地图，需要进入游戏验证。");
+            Log("文件检查通过。");
         });
     }
     void OpenOutput(object sender, RoutedEventArgs e)

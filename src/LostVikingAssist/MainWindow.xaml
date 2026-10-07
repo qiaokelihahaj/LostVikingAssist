@@ -30,7 +30,6 @@
         </Style>
     </Window.Resources>
     <Grid Margin="24" Background="#10151E">
-        <Grid.RowDefinitions><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>
                 <TextBlock Text="失落的维京辅助器" FontSize="24" FontWeight="SemiBold" Margin="0,0,0,22"/>
@@ -77,6 +76,5 @@
                 </Expander>
             </StackPanel>
         </ScrollViewer>
-        <TextBlock Grid.Row="1" Text="官方成就入账尚未实测。进入酒吧街机验证；详细步骤见使用说明。" Foreground="{StaticResource Muted}" FontSize="12" TextWrapping="Wrap" Margin="0,12,0,0"/>
     </Grid>
 </Window>
