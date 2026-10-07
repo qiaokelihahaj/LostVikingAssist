@@ -1,0 +1,31 @@
+# Build and local-only files
+**/bin/
+**/obj/
+/dist/
+/.local/
+/artifacts/
+
+# Native dependencies are restored from pinned upstream sources
+/vendor/*
+!/vendor/README.md
+!/vendor/*-LICENSE.txt
+
+# Game assets and account data must stay local
+*.SC2Map
+*.SC2Mod
+*.SC2Save
+*.SC2Bank
+*.SC2Replay
+*.galaxy
+.LostVikingAssist/
+
+# Editor and environment files
+.vs/
+.idea/
+*.user
+*.suo
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store

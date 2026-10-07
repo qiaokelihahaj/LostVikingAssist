@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LostVikingAssist/LostVikingAssist.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LostVikingAssist.Tests/LostVikingAssist.Tests.csproj" />
+  </Folder>
+</Solution>
